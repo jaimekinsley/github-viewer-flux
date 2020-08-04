@@ -6,8 +6,8 @@ describe('Form component', () => {
   it('renders Form', () => {
     const wrapper = shallow(<Form
       username="jaimekinsley"
-      onChange={() =>{}}
-      onSubmit={() => {}}
+      onChange={handleChange}
+      onSubmit={handleSubmit}
     />);
     expect(wrapper).toMatchSnapshot();
   });

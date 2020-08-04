@@ -6,3 +6,8 @@ export const useFetchUser = () => {
   const { state } = useContext(AppContext);
   return state;
 };
+
+export const useForm = () => {
+  const { state, dispatch } = useContext(AppContext);
+  return { state, dispatch };
+};

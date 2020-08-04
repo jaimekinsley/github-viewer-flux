@@ -1,17 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useForm } from '../../hooks/appContext';
+import { fetchUser } from '../../services/gitHubAPI';
 
-const Form = ({ username, onChange, onSubmit }) => (
-  <form onSubmit={onSubmit}>
-    <input type="text" value={username} onChange={onChange} />
-    <button>Submit</button>
-  </form>
-);
+const Form = () => {
+  const { state, dispatch } = useForm();
 
-Form.propTypes = {
-  username: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired
+  const handleChange = ({ target }) => {
+    dispatch({
+      type: 'SET_USERNAME',
+      payload: target.value
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetchUser(state.username)
+      .then(res => {
+        dispatch({
+          type: 'SET_USER_RESPONSE',
+          payload: res
+        });
+      });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" value={state.username} onChange={handleChange} />
+      <button>Submit</button>
+    </form>
+  );
 };
 
 export default Form;
