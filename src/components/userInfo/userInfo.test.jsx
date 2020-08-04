@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import UserInfo from './userInfo';
+import userInfo from './userInfo';
 
-describe('ShortForm component', () => {
+describe('Form component', () => {
   it('renders UserInfo', () => {
-    const wrapper = shallow(<UserInfo userDetails={{
+    const wrapper = shallow(<userInfo user={{
       name: 'Jaime Sanders',
       followers: 5,
       following: 3,
@@ -13,3 +13,4 @@ describe('ShortForm component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component renders UserInfo 1`] = `
+<userInfo
+  user={
+    Object {
+      "followers": 5,
+      "following": 3,
+      "html_url": "http://github.com/jaimekinsley",
+      "name": "Jaime Sanders",
+    }
+  }
+/>
+`;

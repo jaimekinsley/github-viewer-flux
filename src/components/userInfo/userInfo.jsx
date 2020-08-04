@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFetchUser } from '../../hooks/appContext';
 
-const User = () => {
+const UserInfo = () => {
   const user = useFetchUser();
 
   if(!user) return <h3>Loading...</h3>;
@@ -16,4 +16,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserInfo;
