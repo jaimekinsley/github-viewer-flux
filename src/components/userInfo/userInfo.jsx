@@ -1,10 +1,10 @@
 import React from 'react';
-import { useFetchUser } from '../../hooks/appContext';
+import { useFetchUser, useState } from '../../hooks/appContext';
 
 const UserInfo = () => {
-  const user = useFetchUser();
+  const  user = useFetchUser();
 
-  if(!user) return <h3>Loading...</h3>;
+  if(!user) return <h3>Enter username</h3>;
 
   return (
     <>

@@ -1,16 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form component renders Form 1`] = `
-<form
-  onSubmit={[Function]}
->
-  <input
-    onChange={[Function]}
-    type="text"
-    value="jaimekinsley"
-  />
-  <button>
-    Submit
-  </button>
-</form>
+<AppProvider>
+  <Form>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        onChange={[Function]}
+        type="text"
+      />
+      <button>
+        Submit
+      </button>
+    </form>
+  </Form>
+</AppProvider>
 `;
