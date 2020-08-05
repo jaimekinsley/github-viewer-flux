@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFetchUser, useState } from '../../hooks/appContext';
+import { useFetchUser } from '../../hooks/appContext';
 
 const UserInfo = () => {
   const  user = useFetchUser();
